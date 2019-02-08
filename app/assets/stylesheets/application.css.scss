@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  * // NOTE: I do not have the require tree . line
  *
+ *= require resume.css
  *= require_self
  */
  @import 'bootstrap';
