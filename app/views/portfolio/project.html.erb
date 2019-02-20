@@ -1,2 +1,124 @@
-<h1>Portfolio#project</h1>
-<p>Find me in app/views/portfolio/project.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Resume - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <!--<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <%= stylesheet_link_tag    "/assets/resume.css" %>
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-none d-lg-block">
+        <%= image_tag "Me.png", :class => "img-fluid img-profile rounded-circle mx-auto mb-2"%>
+        <!--<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src='me.png' alt="">-->
+      </span>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/home">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">Projects</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" >
+      <div class="w-100">
+        <h2 class="mb-5">Senior Capstone Project</h2>
+        <div class="social-icons">
+          <div class="resume-date text-md-right">
+            <span class="text-primary">Fall of 2018</span>
+          </div>
+          <a href="https://github.com/OliverAmongUs/GotCrash">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <p>For this project, I in a group of 4 students had to create a web application from scratch. The class was meant to give us experience as full-stack developers. We created the site using Ruby on Rails as a framework with Postgres SQL powering the backend and HTML, CSS, and Javascript for the frontend.
+            This was where I learned how to make this website!</p>
+            <p>The website we created was made to help people who get into car accidents or have other car problems. We give these people easy access to any auto repair shop nearby (If said shop has made an account with us).
+            I was mainly in charge of our in-app messaging system, which uses AJAX and Action Cable to create real-time conversations between users. Twilio was also imported to allow the site to send text messages to your phone when you get a response. </p>
+            <p>Some notable accomplishments within this project: </p>
+            <ul class="bullets">
+              <li>Imported Google Maps functionality </li>
+              <li>Imported Twilio and Action Cable for real-time phone(text) messaging and on-site notifications. </li>
+              <li>Successfully deployed using Heroku. </li>
+            </ul>
+          </div>
+          <h3>Image Gallery: </h3>
+          <div class="gallery">
+            <%= link_to image_tag('GotCrash Profile.png'), image_path("GotCrash Profile.png"), target: '_blank' %>
+            <div class="desc">An example profile page screenshot. </div>
+          </div>
+          <div class="gallery">
+            <%= link_to image_tag('GotCrash Google Maps.png'), image_path("GotCrash Google Maps.png"), target: '_blank' %>
+            <div class="desc">Sample of Google Maps functionality. </div>
+          </div>
+          <div class="gallery">
+            <%= link_to image_tag('GotCrash Messenger.png'), image_path("GotCrash Messenger.png"), target: '_blank' %>
+            <div class="desc">Our in-app messenger. </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <hr class="m-0">
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center">
+      <div class="w-100">
+        <h2 class="mb-5">3D-Animation Coursework</h2>
+        <div class="resume-date text-md-right">
+          <span class="text-primary">Spring of 2019</span>
+        </div>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <p>This is a class that I am currently taking. Right now, I am learning the basics of how to use the animation software blender. This includes learning about modeling and basic game logic.</p>
+            <p>Because this class is ongoing, I will be updating this site as more projects are added. I am including this class regardless because I am realizing that I like to model and animate much more than I thought! I may want to do either on my own after graduation or if possible for a jov. </p>
+            <p>For our final project, our professor recommends us computer science students to use more developed/practical techniques such as using Unreal Engine with manually-coded scripts. So, stay tuned for more great stuff! </p>
+          </div>
+          <h3>Image Gallery: </h3>
+          <div class="gallery">
+            <%= link_to image_tag('Countryside Home.PNG'), image_path("Countryside Home.PNG"), target: '_blank' %>
+            <div class="desc">My first ever modeling asssignment for this class! </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <!--<script src="public/jquery/jquery.min.js"></script>
+  <script src="public/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+
+  <!-- Plugin JavaScript -->
+  <%= javascript_include_tag "/assets/jquery.easing.js" %>
+  <!-- Custom scripts for this template -->
+  <%= javascript_include_tag "/assets/resume.js" %>
+
+</body>
+
+</html>
